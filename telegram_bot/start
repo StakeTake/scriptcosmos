@@ -45,7 +45,7 @@ echo "Bot strating"
 echo "============================================================"
 RED_COLOR='\033[0;31m'
 WITHOU_COLOR='\033[0m'
-for (( ;; )); do
+
 
 source $HOME/.bash_profile
 
@@ -63,7 +63,7 @@ TG_BOT=$API
 TG_ID=$TG_ID
 ip=$(wget -qO- eth0.me)
 
-
+for (( ;; )); do
 touch $LOG_FILE
 REAL_BLOCK=$(curl -s "$SIDE_RPC/status" | jq '.result.sync_info.latest_block_height' | xargs )
 STATUS=$(curl -s "$NODE_RPC/status")
