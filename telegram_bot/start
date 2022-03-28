@@ -87,7 +87,7 @@ fi
 
 
 if [[ $LAST_POWER -ne $VOTING_POWER ]]; then
-    DIFF=$(($VOTING_POWER - $LAST_POWER))
+    DIFF=$VOTING_POWER - $LAST_POWER
     if [[ $DIFF -gt 0 ]]; then
         DIFF="%2B$DIFF"
     fi
