@@ -77,6 +77,7 @@ source $LOG_FILE
 
 echo 'LAST_BLOCK="'"$LATEST_BLOCK"'"' > $LOG_FILE
 echo 'LAST_POWER="'"$VOTING_POWER"'"' >> $LOG_FILE
+echo 'REAL_BLOCK="'"$REAL_BLOCK"'"' >> $LOG_FILE
 
 curl -s "$NODE_RPC/status"> /dev/null
 if [[ $? -ne 0 ]]; then
@@ -87,7 +88,7 @@ fi
 
 
 if [[ $LAST_POWER -ne $VOTING_POWER ]]; then
-    DIFF=$(($VOTING_POWER-$LAST_POWER))
+    DIFF=$(($VOTING_POWER - $LAST_POWER))
     if [[ $DIFF -gt 0 ]]; then
         DIFF="%2B$DIFF"
     fi
