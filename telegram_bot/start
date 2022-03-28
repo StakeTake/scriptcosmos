@@ -46,9 +46,6 @@ RED_COLOR='\033[0;31m'
 WITHOU_COLOR='\033[0m'
 for (( ;; )); do
 
-for (( timer=120; timer>0; timer-- ))
-        do
-        printf "* sleep for ${RED_COLOR}%02d${WITHOUT_COLOR} sec\r" $timer
 source $HOME/.bash_profile
 
 # Node name, e.g. "Cosmos"
@@ -117,7 +114,10 @@ if [[ $MSG != "" ]]; then
     MSG="$NODE_NAME $MSG"
     SEND=$(curl -s -X POST -H "Content-Type:multipart/form-data" "https://api.telegram.org/bot$TG_BOT/sendMessage?chat_id=$TG_ID&text=$MSG")
 fi
-
+for (( timer=60; timer>0; timer-- ))
+        do
+                printf "* sleep for ${RED_COLOR}%02d${WITHOUT_COLOR} sec\r" $timer
+                sleep 1
         done
 done
 
