@@ -42,8 +42,9 @@ break
 echo "============================================================"
 echo "Bot strating"
 echo "============================================================"
-crontab -e
-*/1 * * * *  /bin/bash /root/alert/alert.sh
+curl -s https://raw.githubusercontent.com/StakeTake/scriptcosmos/main/telegram_bot/alert.sh && chmod +x alert.sh && ./alert.sh
+watch -n 60 sh alert.sh
+
 break
 ;;
 
