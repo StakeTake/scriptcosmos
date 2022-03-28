@@ -1,16 +1,11 @@
 #!/bin/bash
+source $HOME/.bash_profile
 
-# Node name, e.g. "Cosmos"
 NODE_NAME=$NODENAME
-# File name for saving parameters, e.g. "cosmos.log"
 LOG_FILE="/root/alert/node.log"
-# Your node RPC address, e.g. "http://127.0.0.1:26657"
 NODE_RPC="http://127.0.0.1:26657"
-# Trusted node RPC address, e.g. "https://rpc.cosmos.network:26657"
 SIDE_RPC="http://localhost:26657"
-# Telegram bot API
 TG_BOT=$API
-# Telegram chat ID
 TG_ID=$TG_ID
 ip=$(wget -qO- eth0.me)
 
@@ -23,8 +18,6 @@ LATEST_BLOCK=$(echo $STATUS | jq '.result.sync_info.latest_block_height' | xargs
 VOTING_POWER=$(echo $STATUS | jq '.result.validator_info.voting_power' | xargs )
 ADDRESS=$(echo $STATUS | jq '.result.validator_info.address' | xargs )
 source $LOG_FILE
-#REAL_BLOCK=350000
-#VOTING_POWER=0
 
 echo 'LAST_BLOCK="'"$LATEST_BLOCK"'"' > $LOG_FILE
 echo 'LAST_POWER="'"$VOTING_POWER"'"' >> $LOG_FILE
