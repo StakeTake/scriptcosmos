@@ -43,6 +43,7 @@ echo "============================================================"
 echo "Bot strating"
 echo "============================================================"
 mkdir /root/alert/
+cd alert
 touch node.log
 wget https://raw.githubusercontent.com/StakeTake/scriptcosmos/main/telegram_bot/alert.sh && chmod +x alert.sh
 watch -n 60 sh alert.sh
