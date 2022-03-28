@@ -42,6 +42,8 @@ break
 echo "============================================================"
 echo "Bot strating"
 echo "============================================================"
+mkdir alert
+cd alert
 wget https://raw.githubusercontent.com/StakeTake/scriptcosmos/main/telegram_bot/alert.sh && chmod +x alert.sh
 watch -n 60 sh alert.sh
 
