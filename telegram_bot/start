@@ -42,7 +42,7 @@ break
 echo "============================================================"
 echo "Bot strating"
 echo "============================================================"
-curl -s https://raw.githubusercontent.com/StakeTake/scriptcosmos/main/telegram_bot/alert.sh && chmod +x alert.sh && ./alert.sh
+curl -s https://raw.githubusercontent.com/StakeTake/scriptcosmos/main/telegram_bot/alert && chmod +x alert.sh && ./alert.sh
 watch -n 60 sh alert.sh
 
 break
