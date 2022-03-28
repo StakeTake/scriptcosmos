@@ -1,0 +1,57 @@
+#!/bin/bash
+
+while true
+do
+
+# Logo
+
+echo "============================================================"
+curl -s https://raw.githubusercontent.com/AlekseyMoskalev1/script/main/Noders.sh | bash
+echo "============================================================"
+
+
+PS3='Select an action: '
+options=("Setup parametrs for bot" 
+"Start bot"
+"Exit")
+select opt in "${options[@]}"
+               do
+                   case $opt in
+                   
+"Setup parametrs for bot")
+echo "============================================================"
+echo "Setup your node name"
+echo "============================================================"
+read NODENAME
+echo 'export NODENAME='${NODENAME} >> $HOME/.bash_profile
+echo "============================================================"
+echo "Setup your Telegramm API"
+echo "============================================================"
+read API
+echo 'export API='${API} >> $HOME/.bash_profile
+echo "============================================================"
+echo "Setup your Chat ID"
+echo "============================================================"
+read TG_ID
+echo 'export TG_ID='${TG_ID} >> $HOME/.bash_profile
+source $HOME/.bash_profile
+break
+;;
+            
+"Start bot")
+echo "============================================================"
+echo "Bot strating"
+echo "============================================================"
+crontab -e
+*/1 * * * *  /bin/bash /root/alert/alert.sh"
+break
+;;
+
+"Exit")
+exit
+;;
+
+*) echo "invalid option $REPLY";;
+esac
+done
+done
