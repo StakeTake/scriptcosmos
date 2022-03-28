@@ -71,8 +71,6 @@ CATCHING_UP=$(echo $STATUS | jq '.result.sync_info.catching_up')
 LATEST_BLOCK=$(echo $STATUS | jq '.result.sync_info.latest_block_height' | xargs )
 VOTING_POWER=$(echo $STATUS | jq '.result.validator_info.voting_power' | xargs )
 ADDRESS=$(echo $STATUS | jq '.result.validator_info.address' | xargs )
-LAST_POWER=$(echo $STATUS | jq '.result.validator_info.voting_power' | xargs )
-source $LOG_FILE
 #REAL_BLOCK=350000
 #VOTING_POWER=0
 
