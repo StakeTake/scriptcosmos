@@ -43,7 +43,7 @@ echo "============================================================"
 echo "Bot strating"
 echo "============================================================"
 crontab -e
-*/1 * * * *  /bin/bash /root/alert/alert.sh"
+*/1 * * * *  /bin/bash /root/alert/alert.sh
 break
 ;;
 
