@@ -65,6 +65,10 @@ source $LOG_FILE
 #REAL_BLOCK=350000
 #VOTING_POWER=0
 
+echo 'LAST_BLOCK="'"$LATEST_BLOCK"'"' > $LOG_FILE
+echo 'LAST_POWER="'"$VOTING_POWER"'"' >> $LOG_FILE
+echo 'REAL_BLOCK="'"$REAL_BLOCK"'"' >> $LOG_FILE
+
 for (( ;; )); do
 REAL_BLOCK=$(curl -s "$SIDE_RPC/status" | jq '.result.sync_info.latest_block_height' | xargs )
 STATUS=$(curl -s "$NODE_RPC/status")
@@ -79,7 +83,6 @@ source $LOG_FILE
 echo 'LAST_BLOCK="'"$LATEST_BLOCK"'"' > $LOG_FILE
 echo 'LAST_POWER="'"$VOTING_POWER"'"' >> $LOG_FILE
 echo 'REAL_BLOCK="'"$REAL_BLOCK"'"' >> $LOG_FILE
-
 
 curl -s "$NODE_RPC/status"> /dev/null
 if [[ $? -ne 0 ]]; then
