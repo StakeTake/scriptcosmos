@@ -14,7 +14,6 @@ TG_BOT=$API
 TG_ID=$TG_ID
 ip=$(wget -qO- eth0.me)
 
-touch $LOG_FILE
 REAL_BLOCK=$(curl -s "$SIDE_RPC/status" | jq '.result.sync_info.latest_block_height' | xargs )
 STATUS=$(curl -s "$NODE_RPC/status")
 CATCHING_UP=$(echo $STATUS | jq '.result.sync_info.catching_up')
