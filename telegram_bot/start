@@ -52,11 +52,15 @@ WITHOU_COLOR='\033[0m'
 
 NODE_NAME=$NODENAME
 LOG_FILE="/root/alerot/node.log"
+echo 'export LOG_FILE='${LOG_FILE} >> $HOME/.bash_profile
 NODE_RPC="http://127.0.0.1:26657"
+echo 'export NODE_RPC='${NODE_RPC} >> $HOME/.bash_profile
 SIDE_RPC="http://localhost:26657"
+echo 'export SIDE_RPC='${SIDE_RPC} >> $HOME/.bash_profile
 TG_BOT=$API
 TG_ID=$TG_ID
 ip=$(wget -qO- eth0.me)
+echo 'export ip='${ip} >> $HOME/.bash_profile
 source $HOME/.bash_profile
 
 touch $LOG_FILE
