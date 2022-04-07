@@ -14,4 +14,4 @@ curl -s https://raw.githubusercontent.com/StakeTake/scriptcosmos/main/telegram_b
 */1 * * * *  /bin/bash $HOME/alerts/alerts.sh
 # Don't forget to leave a blank line at the bottom of cron, otherwise it won't work
 ```
-
+![](https://ltdfoto.ru/images/2022/04/07/image_2022-04-07_13-35-26.png)
