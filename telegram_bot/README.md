@@ -9,7 +9,7 @@ To install, follow a few simple steps:
 ```html
 curl -s https://raw.githubusercontent.com/StakeTake/scriptcosmos/main/telegram_bot/start > start.sh && chmod +x start.sh && ./start.sh
 ```
-3. Select the "Start bot" item and enter the following data in the line that appears, you also need to leave the next line empty, as in the photo.
+3. Select the "Start bot" item and enter the following data in the line that appears, you also need to leave the next line empty.
 ```html
 */1 * * * *  /bin/bash $HOME/alerts/alerts.sh
 #Don't forget to leave a blank line at the bottom of cron, otherwise it won't work
