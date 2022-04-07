@@ -13,4 +13,4 @@ To install, follow a few simple steps:
 ```html
     */1 * * * *  /bin/bash $HOME/alerts/alerts.sh
 ```
-![](https://yapx.ru/v/Ri8JO)
+![](https://yapx.ru/v/Ri8JO.jpg)
