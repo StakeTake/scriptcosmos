@@ -24,17 +24,17 @@ echo "============================================================"
 echo "Setup your node name"
 echo "============================================================"
 read NODENAME
-echo 'NODENAME='${NODENAME} >> $HOME/.bash_profile
+echo export NODENAME=${NODENAME} >> $HOME/.bash_profile
 echo "============================================================"
 echo "Setup your Telegramm API"
 echo "============================================================"
 read API
-echo 'TG_API='${TG_API} >> $HOME/.bash_profile
+echo export API=${API} >> $HOME/.bash_profile
 echo "============================================================"
 echo "Setup your Chat ID"
 echo "============================================================"
 read TG_ID
-echo 'TG_ID='${TG_ID} >> $HOME/.bash_profile
+echo export TG_ID=${TG_ID} >> $HOME/.bash_profile
 source $HOME/.bash_profile
 mkdir $HOME/alerts
 wget -O $HOME/alerts/alerts.sh https://raw.githubusercontent.com/StakeTake/scriptcosmos/main/telegram_bot/alerts.sh
