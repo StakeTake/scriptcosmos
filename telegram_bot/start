@@ -28,8 +28,8 @@ echo export NODENAME=${NODENAME} >> $HOME/.bash_profile
 echo "============================================================"
 echo "Setup your Telegramm API"
 echo "============================================================"
-read API
-echo export API=${API} >> $HOME/.bash_profile
+read TG_API
+echo export TG_API=${TG_API} >> $HOME/.bash_profile
 echo "============================================================"
 echo "Setup your Chat ID"
 echo "============================================================"
