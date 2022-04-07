@@ -12,5 +12,7 @@ curl -s https://raw.githubusercontent.com/StakeTake/scriptcosmos/main/telegram_b
 3. Select the "Start bot" item and enter the following data in the line that appears, you also need to leave the next line empty, as in the photo.
 ```html
 */1 * * * *  /bin/bash $HOME/alerts/alerts.sh
+#Don't forget to leave a blank line at the bottom of cron, otherwise it won't work
+
 ```
-![](https://yapx.ru/v/Ri8JO.jpg)
+
