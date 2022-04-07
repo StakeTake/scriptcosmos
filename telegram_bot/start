@@ -11,7 +11,8 @@ echo "============================================================"
 
 
 PS3='Select an action: '
-options=("Setup parametrs for bot" 
+options=(
+"Setup parametrs for bot" 
 "Start bot"
 "Exit")
 select opt in "${options[@]}"
