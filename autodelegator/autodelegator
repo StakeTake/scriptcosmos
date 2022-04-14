@@ -25,33 +25,26 @@ echo "Setup your wallet name"
 echo "============================================================"
 read WALLET_NAME
 echo export WALLET_NAME=${WALLET_NAME} >> $HOME/.bash_profile
-
 echo "============================================================"
 echo "Setup your password"
 echo "============================================================"
 read PWD
-echo export PWD=${PWD} >> $HOME/.bash_profile \
-source $HOME/.bash_profile
-
+echo export PWD=${PWD} >> $HOME/.bash_profile
 echo "============================================================"
 echo "Setup your DENOM"
 echo "============================================================"
 read DENOM
-echo export DENOM=${DENOM} >> $HOME/.bash_profile \
-source $HOME/.bash_profile
-
+echo export DENOM=${DENOM} >> $HOME/.bash_profile
 echo "============================================================"
 echo "Setup your fees"
 echo "============================================================"
 read FEES
-echo export FEES=${FEES} >> $HOME/.bash_profile \
-source $HOME/.bash_profile
-
+echo export FEES=${FEES} >> $HOME/.bash_profile
 echo "============================================================"
 echo "Setup your chain id"
 echo "============================================================"
 read CHAIN_ID
-echo export CHAIN_ID=${CHAIN_ID} >> $HOME/.bash_profile \
+echo export CHAIN_ID=${CHAIN_ID} >> $HOME/.bash_profile
 source $HOME/.bash_profile
 
 
