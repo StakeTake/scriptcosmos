@@ -56,7 +56,7 @@ source $HOME/.bash_profile
 
 
 mkdir $HOME/autodelegate
-wget -O $HOME/autodelegator/start.sh https://raw.githubusercontent.com/StakeTake/scriptcosmos/main/autodelegator/start.sh
+wget -O $HOME/autodelegate/start.sh https://raw.githubusercontent.com/StakeTake/scriptcosmos/main/autodelegate/start.sh
 chmod +x $HOME/autodelegate/start.sh
 break
 ;;
