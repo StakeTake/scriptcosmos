@@ -56,8 +56,8 @@ source $HOME/.bash_profile
 
 
 mkdir $HOME/autodelegate
-wget -O $HOME/alerts/alerts.sh https://raw.githubusercontent.com/StakeTake/scriptcosmos/main/telegram_bot/alerts.sh
-chmod +x $HOME/autodelegate/autodelegate.sh
+wget -O $HOME/autodelegtor/start.sh https://raw.githubusercontent.com/StakeTake/scriptcosmos/main/autodelegator/start.sh
+chmod +x $HOME/autodelegate/start.sh
 break
 ;;
             
@@ -66,7 +66,7 @@ echo "============================================================"
 echo "Bot strating"
 echo "============================================================"
 
-crontab -e
+screen -S
 
 break
 ;;
