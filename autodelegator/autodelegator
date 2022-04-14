@@ -21,6 +21,11 @@ select opt in "${options[@]}"
        
 "Setup parametrs for autodelegator")
 echo "============================================================"
+echo "Setup your project"
+echo "============================================================"
+read PROJECT
+echo export PROJECT=${PROJECT} >> $HOME/.bash_profile
+echo "============================================================"
 echo "Setup your wallet name"
 echo "============================================================"
 read WALLET_NAME
