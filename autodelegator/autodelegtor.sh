@@ -12,8 +12,8 @@ echo "============================================================"
 
 PS3='Select an action: '
 options=(
-"Setup parametrs for bot" 
-"Start bot"
+"Setup parametrs for autodelegator" 
+"Start autodelegator"
 "Exit")
 select opt in "${options[@]}"
                do
@@ -56,7 +56,7 @@ source $HOME/.bash_profile
 
 
 mkdir $HOME/autodelegate
-wget -O $HOME/autodelegtor/start.sh https://raw.githubusercontent.com/StakeTake/scriptcosmos/main/autodelegator/start.sh
+wget -O $HOME/autodelegator/start.sh https://raw.githubusercontent.com/StakeTake/scriptcosmos/main/autodelegator/start.sh
 chmod +x $HOME/autodelegate/start.sh
 break
 ;;
