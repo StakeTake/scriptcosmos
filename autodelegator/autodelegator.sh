@@ -19,7 +19,7 @@ select opt in "${options[@]}"
                do
                    case $opt in
        
-"Setup parametrs for bot")
+"Setup parametrs for autodelegator")
 echo "============================================================"
 echo "Setup your wallet name"
 echo "============================================================"
@@ -61,7 +61,7 @@ chmod +x $HOME/autodelegate/start.sh
 break
 ;;
             
-"Start bot")
+"Start autodelegator")
 echo "============================================================"
 echo "Bot strating"
 echo "============================================================"
