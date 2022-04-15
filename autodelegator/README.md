@@ -14,3 +14,13 @@ __Project example - umeed__
 6. The FEES variable is usually set to 0, but depends on the network
 7. CHAIN ​​ID is usually set by the name of the testnet or mainnet
 __Chain id example - umee-1__
+
+**After you have set the variables, go to the launch of the redelegator**
+
+The script will automatically open the screen window, where all you have to do is run the redelegator with the command
+
+and exit the window by pressing
+**ctrl + a + d
+
+in order to go back to the window
+**screen-r
