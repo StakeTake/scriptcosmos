@@ -13,4 +13,4 @@ __Project example - umeed__
 5. You can find out the DENOM variable when requesting the balance of tokens on your wallet, this will be the name of the coins
 6. The FEES variable is usually set to 0, but depends on the network
 7. CHAIN ​​ID is usually set by the name of the testnet or mainnet
-Example - umee-1
+__Chain id example - umee-1__
