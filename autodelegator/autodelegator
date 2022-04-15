@@ -36,14 +36,14 @@ echo "============================================================"
 read PWDDD
 echo export PWDDD=${PWDDD} >> $HOME/.bash_profile
 echo "============================================================"
-echo "Setup your validator address"
+echo "Enter the password to set the validator address"
 echo "============================================================"
-read VAL_ADDR
+VAL_ADDR=$($PROJECT keys show $WALLET_NAME --bech val -a)
 echo export VAL_ADDR=${VAL_ADDR} >> $HOME/.bash_profile
 echo "============================================================"
-echo "Setup your delegator address"
+echo "Enter the password to set the delegator address"
 echo "============================================================"
-read DEL_ADDR
+DEL_ADDR=$($PROJECT keys show $WALLET_NAME --bech acc -a)
 echo export DEL_ADDR=${DEL_ADDR} >> $HOME/.bash_profile
 echo "============================================================"
 echo "Setup your DENOM"
