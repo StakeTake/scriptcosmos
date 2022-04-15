@@ -73,7 +73,7 @@ break
 echo "============================================================"
 echo "Bot strating"
 echo "============================================================"
-
+apt install screen
 screen -S AutoDelegate
 
 break
