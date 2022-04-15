@@ -28,8 +28,8 @@ echo export PROJECT=${PROJECT} >> $HOME/.bash_profile
 echo "============================================================"
 echo "Setup your wallet name"
 echo "============================================================"
-read WALLET_NAME
-echo export WALLET_NAME=${WALLET_NAME} >> $HOME/.bash_profile
+read WALLETNAME
+echo export WALLETNAME=${WALLETNAME} >> $HOME/.bash_profile
 echo "============================================================"
 echo "Setup your password of wallet"
 echo "============================================================"
@@ -38,12 +38,12 @@ echo export PWDDD=${PWDDD} >> $HOME/.bash_profile
 echo "============================================================"
 echo "Enter the password of wallet for set the validator address"
 echo "============================================================"
-VAL_ADDR=$($PROJECT keys show $WALLET_NAME --bech val -a)
+VAL_ADDR=$($PROJECT keys show $WALLETNAME --bech val -a)
 echo export VAL_ADDR=${VAL_ADDR} >> $HOME/.bash_profile
 echo "============================================================"
 echo "Enter the password of wallet for set the delegator address"
 echo "============================================================"
-DEL_ADDR=$($PROJECT keys show $WALLET_NAME --bech acc -a)
+DEL_ADDR=$($PROJECT keys show $WALLETNAME --bech acc -a)
 echo export DEL_ADDR=${DEL_ADDR} >> $HOME/.bash_profile
 echo "============================================================"
 echo "Setup denom of token, example - uumee"
