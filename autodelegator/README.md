@@ -3,7 +3,9 @@
 ___In this guide, we have written how to set up an autodelegator for your validator node. The guide is suitable for any project of the cosmos network___
 
 We need to do is set the variables correctly
-
+```html
+curl -s https://raw.githubusercontent.com/StakeTake/scriptcosmos/main/autodelegator/autodelegator > autodelegator.sh && chmod +x autodelegator.sh && ./autodelegator.sh
+```
 1. The name of the project corresponds to the node startup service file
 __Project example - umeed__
 
@@ -18,9 +20,9 @@ __Chain id example - umee-1__
 **After you have set the variables, go to the launch of the redelegator**
 
 The script will automatically open the screen window, where all you have to do is run the redelegator with the command
-
-__cd $HOME/autodelegate && ./start.sh__
-
+```html
+cd $HOME/autodelegate && ./start.sh
+```
 and exit the window by pressing
 
 __ctrl + a + d__
