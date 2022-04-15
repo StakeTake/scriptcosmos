@@ -18,10 +18,13 @@ __Chain id example - umee-1__
 **After you have set the variables, go to the launch of the redelegator**
 
 The script will automatically open the screen window, where all you have to do is run the redelegator with the command
+
 __cd $HOME/autodelegate && ./start.sh__
 
 and exit the window by pressing
+
 __ctrl + a + d__
 
 in order to go back to the window
+
 __screen-r__
