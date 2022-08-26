@@ -15,7 +15,7 @@ for (( timer=12; timer>0; timer-- ))
                 printf "* sleep for ${RED_COLOR}%02d${WITHOUT_COLOR} sec\r" $timer
                 sleep 1
         done
-BAL=$($PROJECT q bank balances ${DEL_ADDR} -o json | jq -r '.balances | .[].amount')
+BAL=$($PROJECT q bank balances ${DEL_ADDR} --output json | jq -r '.balances[] | select(.denom=="'${DENOM}'")' | jq -r .amount)
 echo -e "BALANCE: ${GREEN_COLOR}${BAL}${WITHOU_COLOR} $DENOM\n"
         echo -e "Claim rewards\n"
         echo -e "${PWDDD}\n${PWDDD}\n" | $PROJECT tx distribution withdraw-all-rewards --from ${DEL_ADDR} --chain-id ${CHAIN_ID} --fees ${FEES}${DENOM} -y
@@ -24,7 +24,7 @@ for (( timer=12; timer>0; timer-- ))
                 printf "* sleep for ${RED_COLOR}%02d${WITHOU_COLOR} sec\r" $timer
                 sleep 1
         done
-BAL=$($PROJECT q bank balances ${DEL_ADDR} -o json | jq -r '.balances | .[].amount')
+BAL=$($PROJECT q bank balances ${DEL_ADDR} --output json | jq -r '.balances[] | select(.denom=="'${DENOM}'")' | jq -r .amount)
         BAL=$(($BAL- 500))
 echo -e "BALANCE: ${GREEN_COLOR}${BAL}${WITHOU_COLOR} ${DENOM}\n"
         echo -e "Stake ALL\n"
