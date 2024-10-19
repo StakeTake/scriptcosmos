@@ -5,6 +5,20 @@
 # Support: support@stake-take.com
 # ============================================
 
+echo '' >&2
+echo '███████╗████████╗ █████╗ ██╗  ██╗███████╗████████╗ █████╗ ██╗  ██╗███████╗' >&2
+echo '██╔════╝╚══██╔══╝██╔══██╗██║ ██╔╝██╔════╝╚══██╔══╝██╔══██╗██║ ██╔╝██╔════╝' >&2
+echo '███████╗   ██║   ███████║█████╔╝ █████╗     ██║   ███████║█████╔╝ ███████╗' >&2
+echo '╚════██║   ██║   ██╔══██║██╔═██╗ ██╔══╝     ██║   ██╔══██║██╔═██╗ ██      ' >&2
+echo '███████║   ██║   ██║  ██║██║  ██╗███████╗   ██║   ██║  ██║██║  ██╗███████║' >&2
+echo '╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝' >&2
+echo '' >&2
+echo 'Website: https://stake-take.com' >&2
+echo 'Story dashboard: https://story.stake-take.com/grafana' >&2
+echo 'Twitter: https://twitter.com/StakeAndTake' >&2
+echo '' >&2
+sleep 1
+
 # Exit immediately if a command exits with a non-zero status
 set -e
 
@@ -12,7 +26,7 @@ set -e
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 RED='\033[0;31m'
-NC='\033[0m' # No Color
+NC='\033[0m'
 
 # Determine the user's home directory, even when using sudo
 if [[ -n "$SUDO_USER" ]]; then
